@@ -1,40 +1,44 @@
-reviews = [["discord","suck"],["discord","ew"], ["discord","poop"], ["a","Yes!"], ["a", 'no!'], ['b','frick']]
+# TEST CSV DATA
+# reviewslist = [["discord","suck"],["discord","ew"], ["discord","poop"], ["a","Yes!"], ["a", 'no!'], ['b','frick']]
 
-#Reads reviews list and creates a list for every review in each site (NO. OF SITES MUST MATCH "howmanywebsites" INTEGER)
-currentsite_revs = []
-startindex = 0
-howmanywebsites = 3
-temp_list = []
-currentsite = reviews[0][0]
-
-for j in range(0,howmanywebsites):
-    for i in range(startindex,len(reviews)):
-        if reviews[i][0] == currentsite:
-            temp_list.append(reviews[i][1])
-        else:
-            currentsite = reviews[i][0]
-            startindex=i
-            break
-    currentsite_revs.append(temp_list)
+#Reads reviews list and creates a list for every review in each site (NO. OF SITES MUST MATCH "numOfSites" INTEGER)
+def getReviews(reviewList: list, numOfSites: int):
+    currentsite_revs = []
+    startindex = 0
     temp_list = []
+    currentsite = reviewList[0][0]
 
-print(currentsite_revs)
+    for j in range(0,numOfSites):
+        for i in range(startindex,len(reviewList)):
+            if reviewList[i][0] == currentsite:
+                temp_list.append(reviewList[i][1])
+            else:
+                currentsite = reviewList[i][0]
+                startindex=i
+                break
+        currentsite_revs.append(temp_list)
+        temp_list = []
+
+    return currentsite_revs
+
+#TEST CODE getReviews(reviewslist, 3)
 
 #Reads reviews list and appends each site
-sites = []
-startindex = 0
-howmanywebsites = 3
-currentsite = ""
+def getSites(reviewList: list):
+    sites = []
+    startindex = 0
+    currentsite = ""
 
-for i in range(startindex,len(reviews)):
-    if reviews[i][0] != currentsite:
-        sites.append(reviews[i][0])
-        currentsite = reviews[i][0]
-    else:
-        startindex=i
-        continue
-    
-    temp_list = []
+    for i in range(startindex,len(reviewList)):
+        if reviewList[i][0] != currentsite:
+            sites.append(reviewList[i][0])
+            currentsite = reviewList[i][0]
+        else:
+            startindex=i
+            continue
 
-print(sites)
+    return sites
+
+#TEST CODE getSites(reviewslist)
+
 # add, commit push (for github)
