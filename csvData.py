@@ -1,4 +1,4 @@
-reviews = [["discord","suck"],["discord","review"], ["discord","poop"], ["a","Yes!"], ["a", 'no!'], ['b','frick']]
+reviews = [["discord","suck"],["discord","ew"], ["discord","poop"], ["a","Yes!"], ["a", 'no!'], ['b','frick']]
 
 #Reads reviews list and creates a list for every review in each site (NO. OF SITES MUST MATCH "howmanywebsites" INTEGER)
 currentsite_revs = []
