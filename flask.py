@@ -1,15 +1,15 @@
-from flask import Flask, redirect, url_for
+from flask import Flask, render_template, url_for
 
 app = Flask(__name__)
 
 # Function for index.html
-@app.route("/index.html")
+@app.route("/")
 def reviews():
-    return redirect(url_for("index"))
+    return render_template(url_for("index.html"))
 # Function for reviews.html
-@app.route("/reviews.html")
+@app.route("/")
 def reviews():
-    return "Enter number of tools to scrape: {tools}"
+    return render_template(url_for("reviews.html"))
 
 
 if __name__ == "__main__":
