@@ -7,7 +7,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 # Function for reviews.html
-@app.route("/reviews", methods=["POST"])
+@app.route("/reviews", methods=["POST", "GET"])
 def reviews():
     text = request.form["text"]
     processedText = text.upper()
