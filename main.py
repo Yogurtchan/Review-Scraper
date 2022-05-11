@@ -5,13 +5,13 @@ app = Flask(__name__)
 # Function for index.html
 @app.route("/")
 def index():
-    return render_template(url_for("index.html"))
+    return render_template(url_for("templates/index.html"))
 # Function for reviews.html
 @app.route("/reviews", methods=["POST"])
 def reviews():
     text = request.form["text"]
     processedText = text.upper()
-    return processedText, render_template(url_for("reviews.html"))
+    return processedText, render_template(url_for("templates/reviews.html"))
 
 
 if __name__ == "__main__":
