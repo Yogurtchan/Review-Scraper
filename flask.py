@@ -7,7 +7,7 @@ app = Flask(__name__)
 def reviews():
     return render_template(url_for("index.html"))
 # Function for reviews.html
-@app.route("/", methods=["POST"])
+@app.route("/reviews", methods=["POST"])
 def reviews():
     text = request.form["text"]
     processedText = text.upper()
