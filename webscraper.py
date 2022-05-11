@@ -93,7 +93,7 @@ with open("reviewScraper.csv", "w", encoding="utf-8", newline="") as file:
 
 
 # TO-DO: [DONE] get sitename and user reviews only; store data in single csv file; get tool links and put in a list to run for loop w/o clicking
-# TO-DO: learn how to use gitbash; check siteTools list (look for bubble); add site name and no reviews for other tools in csv body; fix empty site name in csv
+# TO-DO: [DONE]learn how to use gitbash; check siteTools list (look for bubble); add site name and no reviews for other tools in csv body; fix empty site name in csv
 # TO-DO: [DONE] add if statement to disregard/ignore sites with external links OR display in table that link leads to external site
 
 
