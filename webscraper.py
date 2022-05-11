@@ -27,7 +27,10 @@ for i in range(0, 16):
 # Goes through all links of each tool in website and put them inside a list
 for i in range(1, toolNum + 1):
     links = browser.find_element(By.XPATH, f"/html/body/div[2]/div[3]/div/div[2]/div[1]/div/div[2]/div[1]/div[not(contains(@class, 'list-dummy'))][{i}]/div/div/div/div/div/a")
-    siteTools.append(links.get_attribute("href"))
+    if "https://nocodefamily.com/tool/" not in links:
+        siteTools.append("External link")
+    else:
+        siteTools.append(links.get_attribute("href"))
 
 # For each tool in list, gathers all user reviews and puts them on a list
 for i in range(toolNum):
@@ -89,4 +92,5 @@ with open("reviewScraper.csv", "w", encoding="utf-8", newline="") as file:
 # TO-DO: get sitename and user reviews only; store data in single csv file; get tool links and put in a list to run for loop w/o clicking
 # TO-DO: learn how to use gitbash; check siteTools list (look for bubble); add site name and no reviews for other tools in csv body; fix empty site name in csv
 # TO-DO: add if statement to disregard/ignore sites with external links OR display in table that link leads to external site
+
 
