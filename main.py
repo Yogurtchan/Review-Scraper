@@ -9,8 +9,8 @@ def index():
 # Function for reviews.html
 @app.route("/reviews", methods=["POST", "GET"])
 def reviews():
-    text = request.form["text"]
-    processedText = text.upper()
+    # text = request.form["text"]
+    # processedText = text.upper()
     return processedText, render_template("reviews.html")
 
 
