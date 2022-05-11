@@ -27,7 +27,7 @@ for i in range(0, 16):
 # Goes through all links of each tool in website and put them inside a list
 for i in range(1, toolNum + 1):
     links = browser.find_element(By.XPATH, f"/html/body/div[2]/div[3]/div/div[2]/div[1]/div/div[2]/div[1]/div[not(contains(@class, 'list-dummy'))][{i}]/div/div/div/div/div/a")
-    if "https://nocodefamily.com/tool/" not in links:
+    if "https://nocodefamily.com/tool/" not in links.get_attribute("href"):
         siteTools.append("External link")
     else:
         siteTools.append(links.get_attribute("href"))
