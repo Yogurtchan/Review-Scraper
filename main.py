@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # Function for index.html
 @app.route("/")
-def reviews():
+def index():
     return render_template(url_for("index.html"))
 # Function for reviews.html
 @app.route("/reviews", methods=["POST"])
