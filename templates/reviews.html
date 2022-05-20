@@ -13,7 +13,7 @@
   </head>
   <body>
   <section class="section">
-    <form class="input" action="index.html" method="POST">
+    <form class="input" action="index" method="POST">
       <div class="container2">
         <h1 class="title">Tool Reviews</h1>
       </div>
@@ -22,12 +22,27 @@
   </section>
   <section class="rev">
     <div id="siteName">
-      <h3>Site name</h3>
+      <table class="table table-borderless">
+        <tr>
+          <th><h3>Site name</h3></th>
+          <th><h3>Reviews</h3></th>
+        </tr>
+        {%for row in site%}
+            <tr>
+                <td>{{row}}</td>
+                <td>
+                  {% for review in rev[loop.index0] %}
+                    <p>{{review}}</p>
+                  {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+      </table>
     </div>
-    <div id="reviews">
+    <!-- <div id="reviews">
       <h3>Reviews</h3>
     </div>
-  </section>
+  </section> -->
   <button onclick="topFunction()" id="btn" title="Go to top">Top</button>
   </body>
 </html>
