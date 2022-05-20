@@ -12,20 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
   <body>
-  <section class="section">
-    <form class="input" action="reviews" method="post">
+  <img src="{{ url_for('static', filename='infinity.gif') }}" alt="" id="loading" style="display: none;">
+  <section class="section" id="form">
+    <form class="input" action="reviews" method="POST">
       <div class="container1">
         <h1 class="title">
           Tool Review Scraper
         </h1>
       </div>
-      <input class="form-control" type="text" placeholder="Input number of tools">
+      <input class="form-control" type="text" placeholder="Input number of tools" name="userInput">
       <br>
-      <input class="button" type="submit" value="Get Reviews">
-      <!-- <button class="button">Get Reviews</button> -->
+      <input class="button" type="submit" value="Get Reviews" name="Get Reviews" onclick="loading()">
     </form>      
   </section>
+  <script src="{{ url_for('static', filename='functions.js') }}"></script>
   </body>
 </html>
-<!-- Added method post to form; 
-  added input class button with type submit to replace button class -->
