@@ -22,17 +22,17 @@
   </section>
   <section class="rev">
     <div id="siteName">
-      <table class="table table-borderless">
+      <table class="table table-borderless table-hover">
         <tr>
-          <th><h3>Site name</h3></th>
-          <th><h3>Reviews</h3></th>
+          <th scope="col"><h3>Site name</h3></th>
+          <th scope="col"><h3>Reviews</h3></th>
         </tr>
         {%for row in site%}
             <tr>
-                <td>{{row}}</td>
+                <td class="site-col">{{row}}</td>
                 <td>
                   {% for review in rev[loop.index0] %}
-                    <p>{{review}}</p>
+                    <p class="rev-col">{{review}}</p>
                   {% endfor %}
                 </td>
             </tr>
@@ -40,5 +40,6 @@
       </table>
     </div>
   <button onclick="topFunction()" id="btn" title="Go to top">Top</button>
+  <script src="{{ url_for('static', filename='functions.js') }}"></script>
   </body>
 </html>

@@ -141,8 +141,7 @@ input:focus:-moz-placeholder {
 
 #siteName{
     margin: 0%;
-    /* margin-top: 1rem;
-    margin-bottom: 1rem; */
+    
 }
 #reviews{
     margin-right: 20rem;
@@ -152,4 +151,12 @@ input:focus:-moz-placeholder {
 
 table{
     width: 100%;
+    margin: 2em;
+}
+.site-col{
+    margin: 2em;
+}
+.rev-col{
+    margin-left: 3em;
+    margin-top: 2em;
 }
