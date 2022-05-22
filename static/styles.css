@@ -1,12 +1,24 @@
 body{
     background-color: #cbf3f0 !important;
-    margin: 7rem !important;
+    height: 100vh !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.revBod{
+    background-color: #cbf3f0 !important;
+    height: auto !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 #loading{
     margin-left: auto;
     margin-right: auto;
-    width: 25%;
+    width: 20%;
 }
 
 .title{   
@@ -135,7 +147,7 @@ input:focus:-moz-placeholder {
     background-color: #FFFFFF;
     color: #000000;
     border-radius: 15px;
-    width: 100% !important;
+    width: 80% !important;
 
 }
 
@@ -153,10 +165,14 @@ table{
     width: 100%;
     margin: 2em;
 }
+#table1{
+    border-collapse: separate !important;
+    border-spacing: 200px 20px !important;
+}
+
 .site-col{
-    margin: 2em;
+    margin-left: 5em;
 }
 .rev-col{
-    margin-left: 3em;
-    margin-top: 2em;
+    margin-left: 5em;
 }

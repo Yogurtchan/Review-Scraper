@@ -11,7 +11,7 @@
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body style="margin-top: 5rem!important; margin-bottom: 5rem!important;" class="revBod">
   <section class="section">
     <form class="input" action="/" method="POST">
       <div class="container2">
@@ -22,24 +22,26 @@
   </section>
   <section class="rev">
     <div id="siteName">
-      <table class="table table-borderless table-hover">
+      <table class="table table-borderless" id="table1">
         <tr>
-          <th scope="col"><h3>Site name</h3></th>
-          <th scope="col"><h3>Reviews</h3></th>
+          <th><h3>Site name</h3></th>
+          <th><h3>Reviews</h3></th>
         </tr>
         {%for row in site%}
             <tr>
                 <td class="site-col">{{row}}</td>
-                <td>
+                <td class="rev-col">
                   {% for review in rev[loop.index0] %}
-                    <p class="rev-col">{{review}}</p>
+                    <p>{{review}}</p>
                   {% endfor %}
                 </td>
             </tr>
         {% endfor %}
       </table>
     </div>
+  </section>
   <button onclick="topFunction()" id="btn" title="Go to top">Top</button>
   <script src="{{ url_for('static', filename='functions.js') }}"></script>
   </body>
 </html>
+<!-- TO-DO: top part of reviews not display (yung title pati home button, probably sa height need ayusin). try separating reviews css and index -->
