@@ -37,7 +37,7 @@ def runWebscraper(userInput):
     # For each tool in list, gathers all user reviews and puts them on a list
     for i in range(toolNum):
         if siteTools[i] == "External link":
-            csvBody.append(["External link", "Could not obtain reviews."])
+            csvBody.append(["Site leads to external link", "Could not obtain reviews."])
             continue
         browser.get(siteTools[i])
         time.sleep(5)
