@@ -1,6 +1,3 @@
-# TEST CSV DATA
-# reviewslist = [["discord","suck"],["discord","ew"], ["discord","poop"], ["a","Yes!"], ["a", 'no!'], ['b','frick']]
-
 #Reads reviews list and creates a list for every review in each site (NO. OF SITES MUST MATCH "numOfSites" INTEGER)
 def getReviews(reviewList: list, numOfSites: int):
     currentsite_revs = []
@@ -21,8 +18,6 @@ def getReviews(reviewList: list, numOfSites: int):
 
     return currentsite_revs
 
-#TEST CODE getReviews(reviewslist, 3)
-
 #Reads reviews list and appends each site
 def getSites(reviewList: list):
     sites = []
@@ -38,7 +33,3 @@ def getSites(reviewList: list):
             continue
 
     return sites
-
-#TEST CODE getSites(reviewslist)
-
-# add, commit push (for github)
