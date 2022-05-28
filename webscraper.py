@@ -12,7 +12,7 @@ def runWebscraper(userInput):
     options.add_argument("--disable-gpu")
     toolNum = userInput
     url = 'https://nocodefamily.com/tools'
-    browser = webdriver.Chrome(chrome_options=options)
+    browser = webdriver.Chrome(executable_path="./chromedriver.exe",chrome_options=options)
     browser.get(url)
     siteTools = []
     siteName = ""
