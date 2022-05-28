@@ -33,7 +33,6 @@ body{
     border:  solid #FFFFFF;
     background-color: #FFFFFF;
     color: #000000;
-    /* padding: 1em !important; */
     border-radius: 15px;
     display: flex !important;
 }
